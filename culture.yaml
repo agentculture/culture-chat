@@ -1,0 +1,8 @@
+agents:
+- suffix: culture-agent-template
+  backend: claude
+gate:
+  setup:
+  - [uv, sync]
+  test:
+  - [uv, run, pytest, -n, auto]
