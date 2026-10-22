@@ -155,7 +155,7 @@ wheels = [
 ]
 
 [[package]]
-name = "culture-agent-template"
+name = "culture-chat"
 version = "0.10.0"
 source = { editable = "." }
 

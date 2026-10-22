@@ -1,5 +1,5 @@
 agents:
-- suffix: culture-agent-template
+- suffix: culture-chat
   backend: claude
 gate:
   setup:
