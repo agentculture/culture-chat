@@ -123,8 +123,10 @@ colleague    AGENTS.colleague.md
 (a tab-separated `name`/`file` pair; rendered here with spaces for
 Markdown lint compliance)
 
-confirming `AGENTS.colleague.md` (not a bare `AGENTS.md`, which this
-template does not ship) is what colleague loads here.
+confirming `AGENTS.colleague.md` is what colleague loads here. (That run
+predates the shared root `AGENTS.md`; colleague's cascade now lists `AGENTS.md`
+ahead of `AGENTS.colleague.md`, and the smoke check matches the
+`AGENTS.colleague.md` line.)
 
 ## Empirical verification (criterion 1)
 

@@ -107,6 +107,8 @@ harnesses:
       Deterministic, no-model-call CLI introspection: it prints the
       resolved AGENTS instruction layer(s) for this clone rather than
       taking a chat turn, so it is the cheapest and most direct proof that
-      AGENTS.colleague.md (not a bare AGENTS.md, which this template does
-      not ship) is what colleague's prompt cascade resolves here. Verified
-      output: "colleague\tAGENTS.colleague.md".
+      AGENTS.colleague.md is what colleague's prompt cascade resolves here.
+      The shared AGENTS.md base (added after this was first verified) is
+      expected to be listed ahead of it; the check matches the
+      AGENTS.colleague.md line. Verified output before AGENTS.md existed:
+      "colleague\tAGENTS.colleague.md".
