@@ -47,6 +47,9 @@ jobs:
       - name: scan for committed secrets and non-localhost endpoints
         run: python3 scripts/scan-secrets.py
 
+      - name: file length (max 400 lines per tracked Python file)
+        run: python3 scripts/check-file-length.py
+
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: '20'

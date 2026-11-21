@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 Format follows [Keep a Changelog](https://keepachangelog.com/). This project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.11.0] - 2026-11-21
+
+### Added
+
+- `AGENTS.md` — a shared, harness-neutral base (what culture-chat is, its product boundaries from culture-agents#2, commands, conventions). colleague's cascade now starts with it (`AGENTS.md` → `AGENTS.colleague.md`), Qwen Code reads it next to `QWEN.md`, and Codex/other AGENTS.md tools read it directly. Claude Code still reads only `CLAUDE.md`; Pi's `AGENTS.override.md` still replaces it.
+- `scripts/check-file-length.py` — CI `lint` gate capping every tracked Python file (package, `scripts/`, `tests/`) at 400 lines (`MAX_LINES`; vendored `.claude/skills/` exempt), ported from culture-agent-template 0.11.0 with `tests/test_check_file_length.py`.
+
+### Changed
+
+- `CLAUDE.md` re-initialized (`/init`) from the seed into the culture-chat runtime prompt: product boundaries and non-negotiables from culture-agents#2, commands (incl. single-test), architecture, harness map, conventions, roadmap.
+- `README.md`, `QWEN.md`, `AGENTS.colleague.md`, `AGENTS.override.md` rewritten for culture-chat (no longer describe the template); template-only rename instructions dropped.
+- Harness smoke: the `no-bare-agents-md` invariant is replaced by `agents-md-shared-base` (AGENTS.md must be present and non-empty); fixtures, tests and `docs/harness-invocations.yaml` / `docs/automation-contract.md` updated.
+- `scripts/harness-smoke.py` (780 lines) split into `scripts/_harness_smoke/` and `tests/test_harness_smoke.py` (440) split into `test_harness_smoke_contract.py` + `tests/smoke_support.py` + `tests/conftest.py` to fit the cap; behavior unchanged (ported from the template).
+
 ## [0.10.0] - 2026-10-06
 
 ### Added

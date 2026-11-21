@@ -1,6 +1,6 @@
 [project]
 name = "culture-chat"
-version = "0.10.0"
+version = "0.11.0"
 description = "The new chat app of Culture: the human-and-agent chat surface for the AgentCulture mesh. Replaces agentirc."
 readme = "README.md"
 license = "Apache-2.0"

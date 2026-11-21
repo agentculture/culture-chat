@@ -84,7 +84,7 @@ def test_fingerprints_register_every_harness_config_under_its_own_backend(harnes
 
 
 def test_fingerprints_do_not_claim_a_bare_agents_md_for_the_colleague_backend() -> None:
-    """This template ships no AGENTS.md; the colleague row must not imply one."""
+    """AGENTS.md is the shared base, not the colleague resident (AGENTS.colleague.md)."""
     assert "AGENTS.md" not in FINGERPRINTS["colleague"]
 
 
